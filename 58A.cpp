@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    for (int i = 0; i < s.size(); i++) {
+        if (tolower(s[i]) == 'h') {
+
+            for (int j = i + 1; j < s.size(); j++) {
+                if (tolower(s[j]) == 'e') {
+
+                    for (int k = j + 1; k < s.size(); k++) {
+                        if (tolower(s[k]) == 'l') {
+
+                            for (int l = k + 1; l < s.size(); l++) {
+                                if (tolower(s[l]) == 'l') {
+
+                                    for (int m = l + 1; m < s.size(); m++) {
+                                        if (tolower(s[m]) == 'o') {
+                                            cout << "YES";
+                                            return 0;
+                                        }
+                                    }
+
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    cout << "NO";
+    return 0;
+}
