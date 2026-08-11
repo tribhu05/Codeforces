@@ -2,19 +2,21 @@
 using namespace std;
 int main(){
     string s;
-    cin>>s;
-    char arr1[]={'a','e','i','o','u','y'};
-    for (int i=0; i < s.size(); i++){
-        bool isVowel = false;
-        for(char v : arr1){
-            if (tolower(s[i]) == v){
-                isVowel = true;
-                break;                
+    cin>> s;
+    char arr[]={'a','e','i','o','u','y'};
+    for (int i=0;i<s.size();i++){
+        bool isvowel=false;
+        for(char v: arr){
+            if(tolower(s[i])==v){
+                isvowel=true;
+                break;
             }
         }
-        if (!isVowel){
-            cout<< "." << (char)tolower(s[i]); 
+        if(isvowel==false){
+            cout<<'.'<<(char)tolower(s[i]);
         }
     }
-    return 0;     
+    return 0;
 }
+
+
